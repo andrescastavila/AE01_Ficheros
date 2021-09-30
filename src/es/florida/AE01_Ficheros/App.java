@@ -99,5 +99,25 @@ public class App {
 		}
 	}
 	
+	public static void gestioErrors(File fichero) {
+		if(fichero.exists()) {
+			if(fichero.canRead()) {
+				System.out.println("Tienes permisos de lectura. ");
+			}else {
+				System.out.println("No tienes permisos de lectura. ");
+			}
+			
+			
+			if(fichero.canWrite()) {
+				System.out.println("Tienes permisos de escritura");
+			}else {
+				System.out.println("No tienes permisos de escritura");
+			}
+			
+		}else {
+			System.out.println("El archivo no existe. ");
+		}
+	}
+	
 	
 }
