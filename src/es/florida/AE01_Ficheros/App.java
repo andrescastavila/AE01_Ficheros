@@ -1,6 +1,7 @@
 package es.florida.AE01_Ficheros;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 
 
@@ -67,7 +68,16 @@ public class App {
 	}
 	
 	public void crearFichero() {
-		File fichero = new File("");
+		File fichero = new File("C:\\Users\\andre\\eclipse-workspace\\AE01_Ficheros\\bin\\es\\florida\\AE01_Ficheros");
+		try {
+			if(fichero.createNewFile()) {
+				System.out.println("Fichero creado correctamente. ");
+			}else {
+				System.out.println("Error al crear el fichero");
+			}
+		}catch(IOException ioe) {
+			ioe.printStackTrace();
+		}
 	}
 	
 	
