@@ -56,7 +56,7 @@ public class App {
 		}
 	}
 	
-	public void crearDirectorio() {
+	public void crearCarpeta() {
 		File directorio = new File(".");
 		if(!directorio.exists()) {
 			if(directorio.mkdirs()) {
@@ -77,6 +77,15 @@ public class App {
 			}
 		}catch(IOException ioe) {
 			ioe.printStackTrace();
+		}
+	}
+	
+	public static void elimina(File fichero) {
+		if(!fichero.exists()) {
+			System.out.println("El archivo no existe");
+		}else {
+			fichero.delete();
+			System.out.println("El archivo fue eliminado");
 		}
 	}
 	
