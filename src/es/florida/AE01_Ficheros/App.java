@@ -89,5 +89,15 @@ public class App {
 		}
 	}
 	
+	public void renombra() {
+		File f1 = new File("fichero1.txt");
+		File f2 = new File("fichero2.txt");
+		if(f1.renameTo(f2)) {
+			System.out.println("Archivo renombrado correctamente. ");
+		}else {
+			System.out.println("Error al renombrar el archivo");
+		}
+	}
+	
 	
 }
