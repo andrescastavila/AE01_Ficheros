@@ -55,4 +55,20 @@ public class App {
 		}
 	}
 	
+	public void crearDirectorio() {
+		File directorio = new File(".");
+		if(!directorio.exists()) {
+			if(directorio.mkdirs()) {
+				System.out.println("Directorio creado. ");
+			}else {
+				System.out.println("Error al crear el directorio");
+			}
+		}
+	}
+	
+	public void crearFichero() {
+		File fichero = new File("");
+	}
+	
+	
 }
